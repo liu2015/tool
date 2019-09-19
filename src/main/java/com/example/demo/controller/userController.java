@@ -27,4 +27,5 @@ public class userController {
     public List<user> findAll() {
         return userservice.findAll();
     }
+
 }
