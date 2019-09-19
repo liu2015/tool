@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/js/css/bootstrap.min.css" th:href="@{/css/js/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="../static/css/js/css/bootstrap-table.min.css" th:href="@{/js/css/bootstrap-table.min.css}">
+    <script src="../static/css/js/js/jquery-3.4.1.min.js" th:src="@{/css/js/js/jquery-3.4.1.min.js}"></script>
+    <script src="../static/css/js/js/bootstrap.min.js" th:src="@{/css/js/js/bootstrap.min.js}"></script>
+    <script src="../static/css/js/js/bootstrap-table.min.js" th:src="@{/css/js/js/bootstrap-table.min.js}"></script>
+    <script src="../static/css/js/js/bootstrap-table-zh-CN.min.js" th:src="@{/css/js/js/bootstrap-table-zh-CN.min.js}"></script>
+    <script src="../static/css/js/js/bootstrap-table-export.js" th:src="@{/css/js/js/bootstrap-table-export.js}"></script>
+    <script src="../static/css/js/js/tableExport.min.js" th:src="@{/css/js/js/tableExport.min.js}"></script>
+
+
+</head>
+<body>
+<table id="mytest"></table>
+</body>
+<script>
+    $(function () {
+        $("#mytest").bootstrapTable({
+            url:"/all",
+            striped:true,
+            pageNumber:1,
+            pagination:true,
+            sidePagination:'client',
+            pagesize:5,
+            pageList:[5,10],
+            showRefresh:true,
+            showToggle:true,
+            showExport:true,
+            exportDataType:"all",
+            columns:[
+                {
+                    title: 'id',
+                    field: 'id',
+                    sortable: true
+                },
+                {
+                    title: 'name',
+                    field: 'name',
+                    sortable: true
+                },
+                {
+                    title: 'passowrd',
+                    field: 'passowrd',
+                    sortable: true
+                },
+                {
+                    title: 'jaose',
+                    field: 'jaose',
+                    sortable: true
+                },
+                {
+                    title: 'qx',
+                    field: 'qx',
+                    sortable: true
+                },
+                {
+                    title: 'text',
+                    field: 'text',
+                    sortable: true
+                }
+                ]
+        })
+
+    })
+
+</script>
+
+</html>

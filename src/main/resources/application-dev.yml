@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: liu
+    password: Liu1988226
+    url: jdbc:mysql://cdb-kx7bfwy2.bj.tencentcdb.com:10187/mybatis?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+
