@@ -16,12 +16,17 @@ public class userController {
 @Autowired
     userservice userservice;
 
-
-@RequestMapping("/list")
-    public List<user> findAllById(Iterable<String> iterable) {
-        return userservice.findAllById( iterable );
+@PostMapping(value="list")
+    public String findAllById(user user) {
+    Integer id= user.getId();
+    userservice.findAllById( id);
+    return "list";
     }
-
+    @RequestMapping("list")
+    @ResponseBody
+    public List<user> findAllById1(user user) {
+       return userservice.findAllById(user.getId());
+    }
 
     @GetMapping ("/all")
     @ResponseBody
@@ -33,6 +38,22 @@ public class userController {
     public String index(){
 
     return "all";
+    }
+    @RequestMapping("login")
+    public String login(){
+
+    return "login";
+    }
+    @PostMapping  ("/all1")
+    @ResponseBody
+    public List<user> findAll1() {
+        return userservice.findAll();
+    }
+
+    @RequestMapping("login1")
+    public String login1(){
+
+        return "login1";
     }
 
 
