@@ -4,6 +4,7 @@ import com.example.demo.entity.user;
 import com.example.demo.service.userservice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -22,10 +23,16 @@ public class userController {
     }
 
 
-    @PostMapping("/all")
+    @GetMapping ("/all")
     @ResponseBody
     public List<user> findAll() {
         return userservice.findAll();
+    }
+
+    @RequestMapping("index")
+    public String index(){
+
+    return "all";
     }
 
 
