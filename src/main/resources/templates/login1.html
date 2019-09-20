@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="../static/css/bootstrap-table.min.css" th:href="@{/css/bootstrap-table.min.css}">
+    <script src="../static/js/jquery-3.4.1.min.js" th:src="@{/js/jquery-3.4.1.min.js}"></script>
+    <script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+    <script src="../static/js/bootstrap-table.min.js" th:src="@{/js/bootstrap-table.min.js}"></script>
+    <script src="../static/js/bootstrap-table-export.js" th:src="@{/js/bootstrap-table-export.js}"></script>
+    <script src="../static/js/bootstrap-table-zh-CN.min.js" th:src="@{/js/bootstrap-table-zh-CN.min.js}"></script>
+    <script src="../static/js/tableExport.min.js" th:src="@{/js/tableExport.min.js}"></script>
+
+</head>
+<body>
+
+<div>
+    <form action="/list" method="post">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">文本框：</label>
+                <div class="col-sm-9">
+                    <input type="text" name="id" class="form-control" placeholder="请输入文本">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-12 col-sm-offset-3">
+                    <button type="submit" class="btn btn-primary">提交</button>
+                    <button onclick="$.modal.close()" class="btn btn-danger" type="button">关闭</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

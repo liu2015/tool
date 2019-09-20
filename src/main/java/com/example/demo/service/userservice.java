@@ -13,8 +13,8 @@ public class userservice {
     @Autowired
     userRepository userRepository;
 
-    public List<user> findAllById(Iterable<String> iterable) {
-        return userRepository.findAllById( iterable );
+    public List<user> findAllById(Integer id) {
+        return (List<user>) userRepository.findAllById( id );
     }
 
     public List<user> findAll() {
